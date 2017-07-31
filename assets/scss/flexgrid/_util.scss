@@ -1,0 +1,10 @@
+// --------------------------------------------------
+// Flexgrid Functions
+// --------------------------------------------------
+
+
+@function remCalc($size) {
+	$size: $size / ($size * 0 + 1);
+	$remSize: $size / 16;
+	@return #{$remSize}rem;
+}

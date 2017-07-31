@@ -17,6 +17,29 @@
 	margin-right: $gutter;
 }
 
-@each $breakpoint in $breakpoints {
-
+.container {
+	max-width: remCalc(1200px);
+	margin-left: auto;
+	margin-right: auto;
 }
+
+
+
+@each $breakpoint, $size in $breakpoints {
+	@if $breakpoint == small {
+		@for $i from 1 through $numberOfColumns {
+			.#{$breakpoint}-#{$i} {
+				@include buildColumns($i);
+			}
+		}
+	} @else {
+		@for $i from 1 through $numberOfColumns {
+			@include breakpoint($breakpoint) {
+				.#{$breakpoint}-#{$i} {
+					@include buildColumns($i);
+				}
+			}
+		}
+	}
+}
+

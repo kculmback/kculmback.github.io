@@ -2,4 +2,14 @@
 // Flexgrid Settings
 // --------------------------------------------------
 
-$gutter: calc(1.25rem / 2);
+
+$gutterFull: remCalc(20px);
+$gutter: calc(#{$gutterFull} / 2);
+
+$numberOfColumns: 6;
+
+$breakpoints: (
+	small: 0,
+	medium: 640px,
+	large: 1024px
+);
