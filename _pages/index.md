@@ -1,6 +1,6 @@
 ---
 permalink: /
-layout: index
+layout: page
 title: Photography, Videography, and Web Design in Spokane, WA
 ---
 
