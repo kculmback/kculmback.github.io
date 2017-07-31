@@ -21,20 +21,20 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.kaseyculmback.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  kculmback
 author: kaseyculmback
-logo: 
-social: 
+logo:
+social:
   name: Kasey Culmback
   links:
     - https://instagram.com/kculmback
     - https://github.com/kculmback
     - https://linkedin.com/in/kculmback
+css_link:
+  - assets/css/app.css
+js_link:
+  - assets/js/all.js
 
 # Build settings
 markdown: kramdown
-gems: 
-  - "jekyll-sitemap"
-  - "jekyll-paginate"
-  - "jekyll-seo-tag"
 
 # Handling Reading
 include:
@@ -69,4 +69,3 @@ compress_html:
 
 
 
-    
