@@ -6,17 +6,12 @@
 
 // Import order:
 // 1.  Encoding
-// 3.  Fonts
-// 2.  Variables
-// 4.  Flexgrid
-// 5.  Helpers
-//
-// SMACSS Architecture
-// 6.  Base
-// 7.  Layout
-// 8.  Modules
-// 9.  State
-// 10. Theme
+// 2.  Fonts
+// 3.  Variables
+// 4.  Helpers
+// 5.  Base
+// 6.  Layout
+// 7.  Pages
 
 
 
@@ -28,7 +23,7 @@
 
 
 // --------------------------------------------------
-// 3. Fonts
+// 2. Fonts
 // --------------------------------------------------
 
 // Open Sans
@@ -38,7 +33,7 @@
 
 
 // --------------------------------------------------
-// 2. Variables
+// 3. Variables
 // --------------------------------------------------
 
 // Import our global variables first so we can use
@@ -48,20 +43,8 @@
 @import 'base/config';
 
 
-
 // --------------------------------------------------
-// 2. Flexgrid
-// --------------------------------------------------
-@import 'flexgrid/util';
-@import 'flexgrid/settings';
-@import 'flexgrid/mixins';
-@import 'flexgrid/grid';
-@import 'flexgrid/general';
-
-
-
-// --------------------------------------------------
-// 5. Helpers
+// 4. Helpers
 // --------------------------------------------------
 
 // Functions
@@ -73,14 +56,14 @@
 
 
 // --------------------------------------------------
-// 6. Base
+// 5. Base
 // --------------------------------------------------
 @import 'base/text';
 
 
 
 // --------------------------------------------------
-// 7. Layout
+// 6. Layout
 // --------------------------------------------------
 @import 'layouts/l-default';
 @import 'layouts/l-index';
@@ -90,7 +73,7 @@
 
 
 // --------------------------------------------------
-// 8. Modules
+// 7. Pages
 // --------------------------------------------------
 @import 'pages/frontpage';
 
