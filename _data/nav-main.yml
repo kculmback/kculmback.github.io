@@ -4,8 +4,11 @@
 - link: Blog
   url: /blog
 
-- link: Sample Page
-  url: /samplepage
+- link: Portfolio
+  url: /portfolio
 
-- link: Kitchen Sink
-  url: /kitchen-sink
+- link: Non-Profits
+  url: non-profits
+
+- link: Hire Me
+  url: "#hire-me"
