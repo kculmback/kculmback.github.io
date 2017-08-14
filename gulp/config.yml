@@ -22,13 +22,13 @@ copy:
     - "!assets/js{,/**}"             # js dir
     - "!assets/scss{,/**}"           # scss dir
     - "!assets/vendor{,/**}"         # vendor dir
-  dist: "_site/{{ site.baseurl }}/assets/"
+  dist: "_site/assets/"
   notification: "Running Copy"
 
 javascript:
   dest:
     jekyllRoot: "assets/js/"
-    buildDir: "_site/{{ site.baseurl }}/assets/js/"
+    buildDir: "_site/assets/js/"
   # filename to output
   filename: "all.js"
   notification: "Running JavaScript"
