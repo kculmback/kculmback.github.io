@@ -1,7 +1,11 @@
-<nav >
-  <ul class="menu clearfix float-right">
-    {% for item in site.data.nav-main %}
-      <li><a href="{{ item.url }}">{{ item.link }}</a></li>
-    {% endfor %}
-  </ul>
+<nav>
+	<i class="fa fa-bars fa-2x" id="menu-open"></i>
+	<div class="menu closed" id="main-menu">
+		<ul>
+	    {% for item in site.data.nav-main %}
+	      <li><a href="{{ item.url }}">{{ item.link }}</a></li>
+	    {% endfor %}
+	  </ul>
+	  <i class="fa fa-close fa-2x" id="menu-close"></i>
+  </div>
 </nav>
