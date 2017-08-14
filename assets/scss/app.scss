@@ -10,8 +10,9 @@
 // 3.  Variables
 // 4.  Helpers
 // 5.  Base
-// 6.  Layout
-// 7.  Pages
+// 6.  Modules
+// 7.  Layout
+// 8.  Pages
 
 
 
@@ -28,7 +29,8 @@
 
 // Open Sans
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,700");
-@import url('https://fonts.googleapis.com/css?family=Lato:300|Oswald');
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 
 
@@ -59,11 +61,19 @@
 // 5. Base
 // --------------------------------------------------
 @import 'base/text';
+@import 'base/general';
 
 
 
 // --------------------------------------------------
-// 6. Layout
+// 6. Modules
+// --------------------------------------------------
+@import 'modules/header';
+
+
+
+// --------------------------------------------------
+// 7. Layout
 // --------------------------------------------------
 @import 'layouts/l-default';
 @import 'layouts/l-index';
@@ -73,7 +83,7 @@
 
 
 // --------------------------------------------------
-// 7. Pages
+// 8. Pages
 // --------------------------------------------------
 @import 'pages/frontpage';
 
