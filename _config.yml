@@ -29,9 +29,9 @@ social:
     - https://github.com/kculmback
     - https://linkedin.com/in/kculmback
 css_link:
-  - assets/css/app.css
+  - /assets/css/app.css
 js_link:
-  - assets/js/all.js
+  - /assets/js/all.js
 
 # Build settings
 markdown: kramdown
