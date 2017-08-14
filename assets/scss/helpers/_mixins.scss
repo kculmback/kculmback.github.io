@@ -1,3 +1,20 @@
 // --------------------------------------------------
 // Mixins
 // --------------------------------------------------
+
+
+@mixin breakpoint-up($value) {
+	@if map-has-key($breakpoints, $value) {
+		@media (min-width: #{map-get($breakpoints, $value)}) {
+			@content;
+		}
+	}
+}
+
+@mixin breakpoint-down($value) {
+	@if map-has-key($breakpoints, $value) {
+		@media (max-width: #{map-get($breakpoints, $value)}) {
+			@content;
+		}
+	}
+}

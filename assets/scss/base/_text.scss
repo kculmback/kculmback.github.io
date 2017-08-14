@@ -1,3 +1,27 @@
 // --------------------------------------------------
-// Headings
+// Text
 // --------------------------------------------------
+
+
+h1, h2, h3, h4, h5, h6,
+p, a, i, li {
+	font-family: 'Open Sans', sans-serif;
+	color: $darkgrey;
+}
+
+a {
+	color: $lightblue;
+	text-decoration: none;
+	transition: color 300ms;
+	cursor: pointer;
+
+	&:hover {
+		color: $darkblue;
+	}
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+
