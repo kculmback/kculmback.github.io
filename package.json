@@ -5,9 +5,9 @@
   "license": "MIT",
   "main": "gulpfile.js",
   "dependencies": {
-    "babel-preset-es2015": "^6.24.1"
   },
   "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "browser-sync": "^2.10.0",
     "cross-spawn": "^5.0.0",
     "del": "^2.2.0",
