@@ -122,7 +122,8 @@
 .recent-projects {
 	grid-column: span 12;
 	display: grid;
-	grid-column-template: repeat(4, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	justify-items: center;
 
 	h2, a {
 		grid-column: span 4;
@@ -131,10 +132,11 @@
 
 	a {
 		display: grid;
-		grid-column-template: 100%;
+		grid-columns-template: 100%;
 		grid-row-template: 100%;
 		justify-items: center;
 		align-items: center;
+		max-width: 19rem;
 	}
 
 	img {
@@ -142,20 +144,33 @@
 		grid-row: 1;
 		z-index: 1;
 		max-width: 19rem;
+		width: 100%;
 		border-radius: 50%;
-		border: solid 0.8rem transparentize($lightgrey, 0.8);
+		border: solid 0.8rem transparentize($white, 0.8);
 	}
 
 	span {
 		grid-column: 1 / span 1;
 		grid-row: 1;
 		z-index: 2;
+		padding: 0.2rem 0.5rem;
+		background: $darkblue;
+		color: $white;
+		transition: background 250ms, color 250ms;
+
+		&:hover {
+
+		}
 	}
 }
 
 @include breakpoint-up(md) {
 	.recent-projects {
+		grid-column: 2 / span 12;
 		a {
+			max-width: 30rem;
+			transition: transform 250ms;
+
 			&:nth-of-type(1) {
 				grid-column: 2 / span 2;
 				grid-row: 2;
@@ -172,6 +187,16 @@
 				grid-column: 3 / span 2;
 				grid-row: 2;
 				z-index: 1;
+			}
+
+			&:hover {
+				z-index: 5;
+				transform: scale(1.05);
+
+				span {
+					background: $white;
+					color: $darkblue;
+				}
 			}
 		}
 
