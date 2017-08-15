@@ -1,7 +1,8 @@
 ---
 layout: post
 title:  "Welcome to Jekyll!"
-categories: jekyll update
+categories: jekyll update portfolio
+featured_image: https://unsplash.it/450/450/
 ---
 
 You'll find this post in your `_posts` directory.
