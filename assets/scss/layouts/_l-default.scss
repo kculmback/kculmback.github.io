@@ -2,3 +2,33 @@
 // Layout default
 // --------------------------------------------------
 
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+header, main, footer {
+	grid-column: span 12;
+}
+
+main {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+@include breakpoint-up(xl) {
+
+	$gtc: "1fr [content-start] repeat(12, 6.25rem) [content-end] 1fr";
+	.grid {
+		grid-template-columns: #{$gtc};
+	}
+
+	header, footer {
+		grid-column: content-start / span 12;
+	}
+
+	main {
+		grid-column: span 14;
+		grid-template-columns: #{$gtc};
+	}
+}

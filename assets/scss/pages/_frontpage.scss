@@ -2,3 +2,182 @@
 // Frontpage
 // --------------------------------------------------
 
+
+//
+// Hero Image
+// --------------------------------------------------
+
+.main-hero {
+	grid-column: span 14;
+	background: url('/assets/img/frontpage-large.jpg') no-repeat center top;
+	background-size: 300%;
+	padding: 4rem 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	h1, p {
+		// color: $white;
+		max-width: 32rem;
+	}
+
+	h1 {
+		margin-bottom: 0;
+	}
+
+	.btn {
+		color: $white;
+		border-radius: 20px;
+		background: $darkblue;
+		font-weight: 700;
+		padding: 0.8rem 2rem;
+		transition: background 300ms, color 300ms;
+
+		&:hover {
+			color: $darkblue;
+			background: $white;
+		}
+	}
+}
+
+@include breakpoint-up(sm) {
+	.main-hero {
+		background-size: 200%;
+	}
+}
+
+@include breakpoint-up(md) {
+	.main-hero {
+		background-size: 150%;
+	}
+}
+
+@include breakpoint-up(lg) {
+	.main-hero {
+		background-size: 110%;
+	}
+}
+
+@include breakpoint-up(xl) {
+	.main-hero {
+		background-size: 100%;
+	}
+}
+
+
+//
+// About Me Section
+// --------------------------------------------------
+
+.about-me {
+	padding: 4rem 1rem;
+	grid-column: span 12;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+
+	h2 {
+		width: 100%;
+		text-align: center;
+	}
+
+	img {
+		border-radius: 50%;
+		max-width: 250px;
+		width: 100%;
+		margin: 1rem 0;
+	}
+
+	p {
+	}
+}
+
+@include breakpoint-up(md) {
+	.about-me {
+		img {
+			width: calc(35% - 1rem);
+			margin-right: 1rem;
+		}
+
+		p {
+			width: 65%;
+		}
+	}
+}
+
+@include breakpoint-up(xl) {
+	.about-me {
+		grid-column: content-start / span 12;
+	}
+}
+
+
+//
+// Recent Projects
+// --------------------------------------------------
+
+.recent-projects {
+	grid-column: span 12;
+	display: grid;
+	grid-column-template: repeat(4, 1fr);
+
+	h2, a {
+		grid-column: span 4;
+		text-align: center;
+	}
+
+	a {
+		display: grid;
+		grid-column-template: 100%;
+		grid-row-template: 100%;
+		justify-items: center;
+		align-items: center;
+	}
+
+	img {
+		grid-column: 1 / span 1;
+		grid-row: 1;
+		z-index: 1;
+		max-width: 19rem;
+		border-radius: 50%;
+		border: solid 0.8rem transparentize($lightgrey, 0.8);
+	}
+
+	span {
+		grid-column: 1 / span 1;
+		grid-row: 1;
+		z-index: 2;
+	}
+}
+
+@include breakpoint-up(md) {
+	.recent-projects {
+		a {
+			&:nth-of-type(1) {
+				grid-column: 2 / span 2;
+				grid-row: 2;
+				z-index: 2;
+			}
+
+			&:nth-of-type(2) {
+				grid-column: 1 / span 2;
+				grid-row: 2;
+				z-index: 1;
+			}
+
+			&:nth-of-type(3) {
+				grid-column: 3 / span 2;
+				grid-row: 2;
+				z-index: 1;
+			}
+		}
+
+		img {
+			max-width: 30rem;
+		}
+	}
+}
+
