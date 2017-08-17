@@ -2,3 +2,12 @@
 // Layout post
 // --------------------------------------------------
 
+article {
+	grid-column: content-start / span 12;
+	// display: grid;
+	// grid-template-columns: #{$article-columns};
+}
+
+@include breakpoint-up(xl) {
+
+}
