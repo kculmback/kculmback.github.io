@@ -3,16 +3,6 @@
 // --------------------------------------------------
 
 //
-// Breakpoints
-// --------------------------------------------------
-$breakpoints: (
-	sm: 576px,
-	md: 768px,
-	lg: 992px,
-	xl: 1200px
-);
-
-//
 // Colors
 // --------------------------------------------------
 
@@ -23,3 +13,28 @@ $darkgrey: #333;
 
 $lightblue: darken(#CDE7E7, 20%);
 $darkblue: #24465C;
+
+
+//
+// Breakpoints
+// --------------------------------------------------
+$breakpoints: (
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+);
+
+
+//
+//
+// --------------------------------------------------
+$container: 1200px;
+$columns: "[content-start] repeat(12, 6.25rem) [content-end]";
+$xl-columns: "[page-start] 1fr [content-start] repeat(12, 6.25rem) [content-end] 1fr [page-start]";
+$article-columns: "[article-start] repeat(12, 6.25rem) [article-end]";
+$article-xl-columns: "[article-page-start] 1fr [article-start] repeat(12, 6.25rem) [article-end] 1fr [article-page-start]";
+
+
+
+
