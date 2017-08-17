@@ -7,20 +7,3 @@ body {
 	flex-direction: column;
 }
 
-main {
-	display: grid;
-	grid-template-columns: #{$columns};
-}
-
-@include breakpoint-up(xl) {
-
-	header, footer {
-		// grid-column: content-start / span 12;
-	}
-
-	main {
-		// grid-column: span 14;
-		grid-template-columns: #{$xl-columns};
-	}
-
-}

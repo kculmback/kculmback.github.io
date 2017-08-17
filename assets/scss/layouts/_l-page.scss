@@ -3,3 +3,21 @@
 // --------------------------------------------------
 
 
+.page {
+
+	main {
+		display: grid;
+		grid-template-columns: #{$columns};
+	}
+}
+
+@include breakpoint-up(xl) {
+
+	.page {
+
+		main {
+			grid-template-columns: #{$xl-columns};
+		}
+	}
+
+}
