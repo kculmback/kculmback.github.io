@@ -116,14 +116,16 @@
 
 
 //
-// Recent Projects
+// Recent Posts
 // --------------------------------------------------
 
-.recent-projects {
-	grid-column: span 12;
+.recent-posts, .recent-projects {
+	grid-column: content-start / span 12;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 1rem;
 	justify-items: center;
+	padding: 1rem;
 
 	h2, a {
 		grid-column: span 4;
@@ -132,21 +134,27 @@
 
 	a {
 		display: grid;
-		grid-columns-template: 100%;
-		grid-row-template: 100%;
+		grid-template-columns: 100%;
+		grid-template-rows: 100%;
 		justify-items: center;
 		align-items: center;
-		max-width: 19rem;
+		max-width: 25rem;
+
+		&:hover {
+			span {
+				background: $white;
+				color: $darkblue;
+			}
+		}
 	}
 
 	img {
 		grid-column: 1 / span 1;
 		grid-row: 1;
 		z-index: 1;
-		max-width: 19rem;
-		width: 100%;
+		max-width: 100%;
+		height: auto;
 		border-radius: 50%;
-		border: solid 0.8rem transparentize($white, 0.8);
 	}
 
 	span {
@@ -157,18 +165,25 @@
 		background: $darkblue;
 		color: $white;
 		transition: background 250ms, color 250ms;
+	}
+}
 
-		&:hover {
+@include breakpoint-up(sm) {
+	.recent-posts, .recent-projects {
+		a {
+			grid-column: span 2;
+			max-width: 100%;
 
+			&:nth-of-type(3) {
+				grid-column: 2 / span 2;
+			}
 		}
 	}
 }
 
 @include breakpoint-up(md) {
-	.recent-projects {
-		grid-column: 2 / span 12;
+	.recent-posts, .recent-projects {
 		a {
-			max-width: 30rem;
 			transition: transform 250ms;
 
 			&:nth-of-type(1) {
@@ -190,19 +205,50 @@
 			}
 
 			&:hover {
-				z-index: 5;
+				z-index: 5 !important;
 				transform: scale(1.05);
-
-				span {
-					background: $white;
-					color: $darkblue;
-				}
 			}
 		}
 
 		img {
-			max-width: 30rem;
+			border: solid 0.8rem transparentize($white, 0.8);
 		}
 	}
 }
+
+.recent-projects {
+	img {
+		border-radius: 0;
+		border: 0;
+		box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.2);
+	}
+}
+
+@include breakpoint-up(md) {
+	.recent-projects {
+		a {
+			max-width: 75%;
+			margin-left: 2rem;
+
+			&:nth-of-type(1) {
+				grid-column: 1 / span 2;
+				z-index: 3;
+			}
+
+			&:nth-of-type(2) {
+				grid-column: 2 / span 2;
+				z-index: 2;
+				max-width: 70%;
+			}
+
+			&:nth-of-type(3) {
+				grid-column: 3 / span 2;
+				z-index: 1;
+				max-width: 65%;
+			}
+		}
+	}
+}
+
+
 
