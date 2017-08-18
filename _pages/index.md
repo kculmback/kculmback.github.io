@@ -33,3 +33,18 @@ layout: page
 	</a>
 	{% endfor %} -->
 </section>
+
+<section class="recent-posts">
+	<h2>RECENT POSTS</h2>
+	{% for post in site.posts offset: 0 limit: 3 %}
+	<a href="{{ post.url }}" class="post" title="{{ post.title }}">
+		<img src="{{ post.featured_image }}" alt="{{ post.title }}">
+		<span>{{ post.title }}</span>
+	</a>
+	{% endfor %}
+	<!-- {% for post in site.categories.portfolio offset: 0 limit: 3 %}
+	<a href="{{ post.url }}" class="project" title="{{ post.title }}" style="background: url('{{ post.featured_image }}') no-repeat center center; background-size: cover;">
+		<span>{{ post.title }}</span>
+	</a>
+	{% endfor %} -->
+</section>
