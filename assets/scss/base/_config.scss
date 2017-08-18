@@ -30,7 +30,7 @@ $breakpoints: (
 //
 // --------------------------------------------------
 $container: 1200px;
-$columns: "[content-start] repeat(12, 6.25rem) [content-end]";
+$columns: "[content-start] repeat(12, 1fr) [content-end]";
 $xl-columns: "[page-start] 1fr [content-start] repeat(12, 6.25rem) [content-end] 1fr [page-start]";
 $article-columns: "[article-start] repeat(12, 6.25rem) [article-end]";
 $article-xl-columns: "[article-page-start] 1fr [article-start] repeat(12, 6.25rem) [article-end] 1fr [article-page-start]";
