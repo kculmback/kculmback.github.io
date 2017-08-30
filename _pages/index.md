@@ -54,15 +54,16 @@ layout: page
 	</div>
 	<div class="card">
 		<i class="fa fa-star"></i>
-		<h4>Easily edited and extensible</h4>
-		<p>I ensure that the content of each website I build is easily updated and extensible where it can be. Rather then you having to dig into a mess of code to update that header for that one section, you will find a specific text field for that field in the backend. For content like lists, feature sections, galleries, etc, you'll be able to add as many as you want in order to extend the content of your website.</p>
-	</div>
-	<div class="card">
-		<i class="fa fa-star"></i>
 		<h4>Fair, competitive pricing</h4>
 		<p>Simply put, you won't be able to find a web developer that puts in this much care and detail into your website for the prices I offer. This is because this isn't my fulltime job, it's my passion project. My pricing is straightforward: $300 for designing and developing the website and $25 for each page beyond the homepage. If you have any special, out there needs, we can talk about that and I'll work out a qoute for you.<br><br>
 		If you're a non-profit and are on a tightbudget, feel free to reach out to me and I'll glady work with you to try and put something together!</p>
 	</div>
+	<div class="card">
+		<i class="fa fa-star"></i>
+		<h4>Easily edited and extensible</h4>
+		<p>I ensure that the content of each website I build is easily updated and extensible where it can be. Rather then you having to dig into a mess of code to update that header for that one section, you will find a specific text field for that field in the backend. For content like lists, feature sections, galleries, etc, you'll be able to add as many as you want in order to extend the content of your website.</p>
+	</div>
+	<a href="#" class="btn">Contact Me</a>
 </section>
 
 
