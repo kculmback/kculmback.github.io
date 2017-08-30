@@ -1,0 +1,15 @@
+.btn {
+		color: $white;
+		border-radius: 20px;
+		border: 1px solid $darkblue;
+		background: $darkblue;
+		font-weight: 700;
+		padding: 0.8rem 2rem;
+		transition: background 300ms, color 300ms;
+
+		&:hover {
+			color: $darkblue;
+			background: $white;
+			border: 1px solid $white;
+		}
+	}

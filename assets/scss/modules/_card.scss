@@ -1,0 +1,31 @@
+.card {
+	display: grid;
+	grid-template-columns: auto repeat(2, 1fr);
+	grid-template-areas:
+		"icon header header"
+		". writing writing";
+	align-items: center;
+	padding: 1rem;
+
+	h4, p {
+		margin: 0.3rem 0;
+	}
+
+	i {
+		grid-area: icon;
+		padding-right: 1rem;
+		font-size: 2rem;
+	}
+
+	h4 {
+		grid-area: header;
+		// margin: 0 0 0.6rem;
+	}
+
+	p {
+		grid-area: writing;
+		// padding-left: 1rem;
+		// margin: 0;
+	}
+
+}
