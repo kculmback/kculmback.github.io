@@ -1,27 +1,33 @@
 ---
 layout: page
 ---
+<section class="title">
+	<h1>Blog Posts</h1>
+</section>
 
 <!-- This loops through the paginated posts -->
+<section class="posts">
 {% for post in paginator.posts %}
-
-    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-    <p class="post-meta">{{ post.date | date: '%d.%m.%Y' }}</p>
-    {{ post.excerpt }}
-    <a href="{{ post.url }}">Read more...</a>
-
-    {% unless forloop.last %}
-    <hr>
-    {% endunless %}
-
+	<div class="post">
+		<div class="post-title">
+			<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+			<img src="{{ post.featured_image }}" alt="{{ post.title }} Featured Image">
+		</div>
+		<div class="post-info">
+			<div class="post-meta"><p>{{ post.date | date: '%m/%d/%Y' }}</p></div>
+			<div class="post-excerpt">{{ post.excerpt }}</div>
+			<div class="post-url"><a href="{{ post.url }}">Read more...</a></div>
+		</div>
+	</div>
 {% endfor %}
+</section>
 
 <br><br>
 
 <!-- Pagination links -->
 {% if paginator.total_pages > 1 %}
-<nav>
-    <ul class="pagination">
+<nav class="pagination">
+    <ul>
         {% if paginator.previous_page %}
             <li class="arrow"><a href="{{ paginator.previous_page_path | replace: '/index.html', '' }}">&laquo;</a></li>
         {% else %}
