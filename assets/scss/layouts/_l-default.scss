@@ -7,3 +7,7 @@ body {
 	flex-direction: column;
 }
 
+section.title {
+	grid-column: content-start / span 12;
+	text-align: center;
+}
