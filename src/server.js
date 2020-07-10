@@ -5,7 +5,7 @@ import { json } from 'body-parser';
 import * as sapper from '@sapper/server';
 import { config } from 'dotenv';
 import { connectToDatabase } from './database';
-import uuidv4 from 'uuid/v4';
+import { v4 as uuidv4 } from 'uuid';
 import helmet from 'helmet';
 
 config();

@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { config } from "dotenv";
+import mongoose from 'mongoose';
+import { config } from 'dotenv';
 config();
 
 let cachedDb = null;
@@ -15,7 +15,10 @@ export async function connectToDatabase(uri = process.env.MONGODB_URI) {
 
   try {
     // If no connection is cached, create a new one
-    await mongoose.connect(uri, { useNewUrlParser: true });
+    await mongoose.connect(uri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
   } catch (error) {
     console.log(error);
     return;
