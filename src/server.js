@@ -5,8 +5,8 @@ import { json } from 'body-parser';
 import * as sapper from '@sapper/server';
 import { config } from 'dotenv';
 import { connectToDatabase } from './database';
-import { v4 as uuidv4 } from 'uuid';
-import helmet from 'helmet';
+// import { v4 as uuidv4 } from 'uuid';
+// import helmet from 'helmet';
 
 config();
 
@@ -17,17 +17,25 @@ connectToDatabase();
 
 const app = polka() // You can also use Express
   .use(
-    (req, res, next) => {
-      res.locals.nonce = uuidv4();
-      next();
-    },
-    helmet({
-      contentSecurityPolicy: {
-        directives: {
-          scriptSrc: ["'self'", (req, res) => `'nonce-${res.locals.nonce}'`],
-        },
-      },
-    }),
+    // (req, res, next) => {
+    //   res.locals = {
+    //     nonce: uuidv4(),
+    //   };
+    //   next();
+    // },
+    // helmet({
+    //   contentSecurityPolicy: {
+    //     directives: {
+    //       scriptSrc: [
+    //         "'self'",
+    //         (req, res) => {
+    //           console.log(res.locals);
+    //           return `'nonce-${res.locals.nonce}'`;
+    //         },
+    //       ],
+    //     },
+    //   },
+    // }),
     json(),
     compression({ threshold: 0 }),
     sirv('static', { dev }),
