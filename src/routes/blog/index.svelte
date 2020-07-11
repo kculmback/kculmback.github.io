@@ -1,17 +1,17 @@
 <script context="module">
   export async function preload({ params, query }) {
-    const postsResponse = await this.fetch(`blog.json`)
-    const posts = await postsResponse.json()
+    const postsResponse = await this.fetch(`blog.json`);
+    const posts = await postsResponse.json();
 
-    const tagsResponse = await this.fetch(`blog/tags.json`)
-    const tags = await tagsResponse.json()
+    const tagsResponse = await this.fetch(`blog/tags.json`);
+    const tags = await tagsResponse.json();
 
     return { posts, tags };
   }
 </script>
 
 <script>
-  import Posts from '../../components/Posts.svelte'
+  import Posts from '../../components/Posts.svelte';
 
   export let posts = [];
   export let tags = [];
@@ -20,16 +20,16 @@
 
   $: filteredPosts = selectedTags.length
     ? posts.filter(post => post.tags.some(tag => selectedTags.includes(tag)))
-    : posts
+    : posts;
 
   function updateSelectedTags(clickedTag) {
     if (selectedTags.includes(clickedTag)) {
-      selectedTags = selectedTags.filter(tag => tag !== clickedTag)
-      return
+      selectedTags = selectedTags.filter(tag => tag !== clickedTag);
+      return;
     }
 
-    selectedTags.push(clickedTag)
-    selectedTags = selectedTags
+    selectedTags.push(clickedTag);
+    selectedTags = selectedTags;
   }
 </script>
 
@@ -42,11 +42,11 @@
     <h1 class="mb-4">Blog</h1>
   </div>
   <div class="text-center mb-8">
+    <span class="block font-bold text-lg mb-1">Tags</span>
     {#each tags as tag}
       <button
-        class="capitalize px-4 py-2 rounded-full m-4 {selectedTags.includes(tag) ? 'bg-primary hover:bg-primary-dark text-white' : 'bg-gray-300 hover:bg-gray-400'}"
-        on:click={() => updateSelectedTags(tag)}
-      >
+        class="capitalize px-4 py-2 rounded-full mx-2 my-2 {selectedTags.includes(tag) ? 'bg-primary hover:bg-primary-dark text-white' : 'bg-gray-300 hover:bg-gray-400'}"
+        on:click={() => updateSelectedTags(tag)}>
         {tag}
       </button>
     {/each}
