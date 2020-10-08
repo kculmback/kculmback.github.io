@@ -12,14 +12,12 @@
 <GlobalStyle />
 
 <div class="container mx-auto px-4">
-  <div class="text-gray-700 leading-snug">
-    <Header {segment} />
+  <Header {segment} />
 
-    <main class="pb-8">
-      <slot />
-    </main>
+  <main class="pb-8">
+    <slot />
+  </main>
 
-    <!-- <footer>
+  <!-- <footer>
     </footer> -->
-  </div>
 </div>

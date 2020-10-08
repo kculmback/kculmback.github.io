@@ -12,6 +12,7 @@
 
 <script>
   import Posts from '../../components/Posts.svelte';
+  import Tag from '../../components/Tag.svelte';
 
   export let posts = [];
   export let tags = [];
@@ -31,6 +32,10 @@
     selectedTags.push(clickedTag);
     selectedTags = selectedTags;
   }
+
+  function handleTagSelect(e) {
+    updateSelectedTags(e.detail.tag);
+  }
 </script>
 
 <svelte:head>
@@ -44,11 +49,10 @@
   <div class="text-center mb-8">
     <span class="block font-bold text-lg mb-1">Tags</span>
     {#each tags as tag}
-      <button
-        class="capitalize px-4 py-2 rounded-full mx-2 my-2 {selectedTags.includes(tag) ? 'bg-primary hover:bg-primary-dark text-white' : 'bg-gray-300 hover:bg-gray-400'}"
-        on:click={() => updateSelectedTags(tag)}>
+      <Tag
+        selected={selectedTags.includes(tag)}
         {tag}
-      </button>
+        on:click={handleTagSelect} />
     {/each}
   </div>
   <Posts posts={filteredPosts} />

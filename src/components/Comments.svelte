@@ -59,7 +59,7 @@
     </div>
     {#if showAddComment}
       <form
-        class="mb-4 p-4 rounded shadow-sm"
+        class="mb-4 p-4 rounded shadow-sm dark:bg-gray-800"
         on:submit|preventDefault={submitComment}>
         <label class="block mb-2">
           Name
@@ -69,7 +69,8 @@
             placeholder="Jane Doe"
             required
             maxlength="100"
-            class="w-full border broder-gray-100 rounded p-4" />
+            class="w-full border border-gray-100 dark:bg-gray-300
+            dark-border-gray-300 dark:text-gray-900 rounded p-4" />
         </label>
         <label class="block mb-2">
           Comment
@@ -77,7 +78,8 @@
             name="comment"
             rows="7"
             placeholder="Write your comment here. Basic markdown is supported."
-            class="w-full border broder-gray-100 rounded p-4"
+            class="w-full border border-gray-100 dark:bg-gray-300
+            dark-border-gray-300 dark:text-gray-900 rounded p-4"
             required
             maxlength="1000"
             bind:value={userComment} />
@@ -105,8 +107,8 @@
     {/if}
     {#each comments as comment}
       <figure
-        class="mb-4 p-4 border border-gray-100 rounded-lg overflow-hidden
-        shadow-md">
+        class="mb-4 p-4 border border-gray-100 dark:bg-gray-800
+        dark:border-gray-800 rounded-lg overflow-hidden shadow-md">
         <div>
           <span class="font-bold">{comment.name}</span>
           -
@@ -119,8 +121,8 @@
       </figure>
     {:else}
       <figure
-        class="mb-4 p-4 border border-gray-100 rounded-lg overflow-hidden
-        shadow-md">
+        class="mb-4 p-4 border border-gray-100 dark:bg-gray-800
+        dark:border-gray-800 rounded-lg overflow-hidden shadow-md">
         <div>No comments have been added.</div>
       </figure>
     {/each}

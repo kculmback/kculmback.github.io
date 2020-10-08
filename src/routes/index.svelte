@@ -36,16 +36,14 @@
         of learning new technologies, employing best practices, and constantly
         challenging myself.
       </p>
+      <!-- prettier-ignore -->
       <p>
         Looking to get to know me? Send me a message on
-        <a href="https://www.linkedin.com/in/kculmback" target="_blank">
-          LinkedIn
-        </a>
-        , check out my
-        <a href="https://www.github.com/kculmback" target="_blank">GitHub</a>
-        , take a look at my
-        <a href="resume">resume</a>
-        , or check out my most recent case studies & blog posts below.
+        <a href="https://www.linkedin.com/in/kculmback" target="_blank">LinkedIn</a>,
+        check out my
+        <a href="https://www.github.com/kculmback" target="_blank">GitHub</a>,
+        take a look at my <a href="resume">resume</a>,
+        or check out my most recent case studies & blog posts below.
       </p>
     </div>
     <div class="flex-shrink-0">

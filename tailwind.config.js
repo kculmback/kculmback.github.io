@@ -1,4 +1,5 @@
-const blue = require('tailwindcss/stubs/defaultConfig.stub').theme.colors.blue;
+const defaults = require('tailwindcss/stubs/defaultConfig.stub');
+const blue = defaults.theme.colors.blue;
 
 module.exports = {
   purge: false,
@@ -19,6 +20,14 @@ module.exports = {
       },
     },
   },
-  variants: {},
-  plugins: [],
+  variants: {
+    backgroundColor: [
+      ...defaults.variants.backgroundColor,
+      'dark',
+      'dark-hover',
+    ],
+    borderColor: [...defaults.variants.borderColor, 'dark'],
+    textColor: [...defaults.variants.textColor, 'dark', 'dark-hover'],
+  },
+  plugins: [require('tailwindcss-dark-mode')()],
 };
